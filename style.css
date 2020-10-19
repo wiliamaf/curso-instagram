@@ -1,0 +1,184 @@
+*
+{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT';
+    font-size: 14px;
+}
+
+body
+{
+    margin:0;
+    padding:0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(247,248,250);
+    display: flex;
+    justify-content: center;
+}
+
+.instagram-wrapper
+{
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    width:50%;
+    height: 100vh;
+}
+
+.instagram-phone
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:50%;
+}
+
+.instagram-phone img 
+{
+    height:35rem;
+}
+
+.instagram-continue
+{
+    display:flex;
+    flex-direction: column; /*inverter a direção*/
+    align-items: center; /*na horizontal*/
+    justify-content: space-around; /*na vertical*/
+    width: 47%;
+    min-height: 35rem;
+}
+
+.group
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+}
+
+.group:nth-child(1) /*selecionar o índice 1 do group*/
+{
+    min-height: 19rem;
+}
+
+.logo
+{
+    height: 3rem;
+}
+
+.profile
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile img
+{
+    height: 6rem;
+}
+
+.login
+{
+    background-color: #0095f6;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.logout
+{
+    color:#0095f6;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.not-account
+{
+    color: rgb(160,160,160);
+}
+
+.link-blue
+{
+    color:#0095f6;
+}
+
+.download
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.store
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.download-store
+{
+    height: 3.5rem;
+    width: 12rem;
+    background-size: cover;
+}
+
+.download-store:nth-child(1)
+{
+    background-image: url('./img/apple-button.png');
+}
+
+.download-store:nth-child(2)
+{
+    background-image: url('./img/googleplay-button.png');
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px)
+{
+    .instagram-wrapper 
+    { 
+        width:90%;
+    }
+}
+
+@media (max-width: 650px)
+{
+    body
+    {
+        background-color: white;
+    }
+    .instagram-wrapper
+    {
+        width:90%;
+    }
+    .instagram-phone
+    {
+        display:none; /* somente esta div para tela menor */
+    }
+    .instagram-continue
+    {
+        width:100%;
+    }
+    .group
+    {
+        border: 1px solid transparent;
+    }
+}
